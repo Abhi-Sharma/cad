@@ -717,33 +717,6 @@ int main()
 	 return 0;
 }`,
 	},
-	"p11a.c": {
-		title: "p11a",
-		code: String.raw`#include<stdio.h>
-#include<fcntl.h>
-#include<unistd.h>
-int main(){
-	char file[20], ch;
-	int fd,size,i;
-	printf("Enter the filename:");
-	scanf("%s", file);
-	fd = open(file,O_RDONLY);
-
-	if(fd < 0){
-		printf("File not found");
-		return 0;
-	}
-	size = lseek(fd, 0, SEEK_END);
-	printf("Reverse Content:\n");
-	
-	for(int i=size-1; i>=0;i--){
-		lseek(fd, i, SEEK_SET);
-		read(fd, &ch, 1);
-		printf("%c", ch);
-	}
-	close(fd);
-}`,
-	},
 	"p11adup.c": {
 		title: "p11adup",
 		code: String.raw`#include<stdio.h>
@@ -837,6 +810,86 @@ int main(int argc, char *argv[])
 	else{
 		wait(&status);
 		printf("Child exited with status: %d\n", status);
+	}
+	return 0;
+}`,
+	},
+	"p12a.c": {
+		title: "p12a",
+		code: String.raw`#include<stdio.h>
+#include<unistd.h>
+#include<stdlib.h>
+#include<sys/wait.h>
+
+int main()
+{
+    int pid1, pid2;
+
+    
+    pid1 = fork();
+
+    if(pid1 == 0)
+    {
+        printf("Child 1 pid: %d\n", getpid());
+        exit(0);   
+    }
+    else
+    {
+        sleep(2);  
+
+        printf("terminated child's pid: %d\n", pid1);
+
+        
+        pid2 = fork();
+
+        if(pid2 == 0)
+        {
+            printf("Child 2 pid is: %d\n", getpid());
+            printf("second child, parent pid = %d\n", getppid());
+            exit(0);
+        }
+        else
+        {
+            wait(NULL);   
+            wait(NULL);   
+        }
+    }
+
+    return 0;
+}`,
+	},
+	"p12bechoall.c": {
+		title: "p12bechoall",
+		code: String.raw`#include<stdio.h>
+
+int main(int argc, char *argv[])
+{
+	int i;
+
+	for(i = 0;i<argc;i++)
+	{
+		printf("argv[%d]:%s\n", i , argv[i]);
+	}
+	return 0;
+}`,
+	},
+	"p12bmain.c": {
+		title: "p12bmain",
+		code: String.raw`#include<stdio.h>
+#include<unistd.h>
+
+int main()
+{
+	int pid;
+
+	pid = fork();
+	if(pid  == 0)
+	{
+		execl("./echoall", "echoall", "myarg1","MYARG1",NULL);
+	}
+	else{
+		sleep(1);
+		 execl("./echoall","echoall","only 1 arg", NULL);
 	}
 	return 0;
 }`,
