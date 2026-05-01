@@ -1,12 +1,12 @@
 export interface Program {
-    title: string;
-    code: string;
+	title: string;
+	code: string;
 }
 
 export const programs: Record<string, Program> = {
-    "p1a.c": {
-        title: "p1a",
-        code: String.raw`#include<stdio.h>
+	"p1a.c": {
+		title: "p1a",
+		code: String.raw`#include<stdio.h>
 #include<fcntl.h>
 #include<unistd.h>
 int main(){
@@ -30,10 +30,10 @@ int main(){
 	}
 	close(fd);
 }`,
-    },
-    "p1b.c": {
-        title: "p1b",
-        code: String.raw`#include<stdio.h>
+	},
+	"p1b.c": {
+		title: "p1b",
+		code: String.raw`#include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
 #include<fcntl.h>
@@ -78,10 +78,10 @@ int main()
 	close(fd);
 	return 0;
 }`,
-    },
-    "p2a.c": {
-        title: "p2a",
-        code: String.raw`#include<stdio.h>
+	},
+	"p2a.c": {
+		title: "p2a",
+		code: String.raw`#include<stdio.h>
 #include<sys/stat.h>
 #include<time.h>
 
@@ -109,10 +109,10 @@ int main()
 
 	return 0;
 }`,
-    },
-    "p2b.c": {
-        title: "p2b",
-        code: String.raw`#include<stdio.h>
+	},
+	"p2b.c": {
+		title: "p2b",
+		code: String.raw`#include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
 #include<sys/wait.h>
@@ -166,10 +166,10 @@ int main()
 
     return 0;
 }`,
-    },
-    "p3a.c": {
-        title: "p3a",
-        code: String.raw`#include<stdio.h>
+	},
+	"p3a.c": {
+		title: "p3a",
+		code: String.raw`#include<stdio.h>
 #include<dirent.h>
 #include<unistd.h>
 #include<string.h>
@@ -207,10 +207,10 @@ int main(int argc,char *argv[])
 
     closedir(d);
 }`,
-    },
-    "p3b.c": {
-        title: "p3b",
-        code: String.raw`#include<stdio.h>
+	},
+	"p3b.c": {
+		title: "p3b",
+		code: String.raw`#include<stdio.h>
 #include<dirent.h>
 #include<sys/stat.h>
 #include<time.h>
@@ -244,10 +244,10 @@ int main(int argc, char *argv[])
 	closedir(dp);
 	return 0;
 }`,
-    },
-    "p4a.c": {
-        title: "p4a",
-        code: String.raw`#include<stdio.h>
+	},
+	"p4a.c": {
+		title: "p4a",
+		code: String.raw`#include<stdio.h>
 #include<stdlib.h>
 #include<sys/stat.h>
 #include<sys/types.h>
@@ -276,11 +276,11 @@ int main(int argc, char *argv[])
 	}
 	return 0;
 }`,
-    },
+	},
 
-    "p4bechoall.c": {
-        title: "p4bechoall",
-        code: String.raw`#include<stdio.h>
+	"p4bechoall.c": {
+		title: "p4bechoall",
+		code: String.raw`#include<stdio.h>
 #include<stdlib.h>
 
 int main(int argc, char *argv[])
@@ -293,10 +293,10 @@ int main(int argc, char *argv[])
 	}
 	return 0;
 }`,
-    },
-    "p4bmain.c": {
-        title: "p4bmain",
-        code: String.raw`#include<stdio.h>
+	},
+	"p4bmain.c": {
+		title: "p4bmain",
+		code: String.raw`#include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
 #include<sys/wait.h>
@@ -316,10 +316,10 @@ int main()
 	}
 	return 0;
 }`,
-    },
-    "p5a.c": {
-        title: "p5a",
-        code: String.raw`#include<stdio.h>
+	},
+	"p5a.c": {
+		title: "p5a",
+		code: String.raw`#include<stdio.h>
 #include<sys/stat.h>
 #include<utime.h>
 
@@ -346,10 +346,10 @@ int main()
 
     return 0;
 }`,
-    },
-    "p5b.c": {
-        title: "p5b",
-        code: String.raw`#include<stdio.h>
+	},
+	"p5b.c": {
+		title: "p5b",
+		code: String.raw`#include<stdio.h>
 #include<signal.h>
 
 void handler(int n)
@@ -369,10 +369,10 @@ int main()
 
     while(1);
 }`,
-    },
-    "p6a.c": {
-        title: "p6a",
-        code: String.raw`#include<stdio.h>
+	},
+	"p6a.c": {
+		title: "p6a",
+		code: String.raw`#include<stdio.h>
 #include<unistd.h>
 #include<fcntl.h>
 #include<string.h>
@@ -398,10 +398,10 @@ int main()
 
 	close(fd);
 	}`,
-    },
-    "p7a.c": {
-        title: "p7a",
-        code: String.raw`#include<stdio.h>
+	},
+	"p7a.c": {
+		title: "p7a",
+		code: String.raw`#include<stdio.h>
 #include<setjmp.h>
 
 jmp_buf buf;
@@ -437,10 +437,10 @@ int main()
 	f1();
 	return 0;
 }`,
-    },
-    "p7b.c": {
-        title: "p7b",
-        code: String.raw`#include<stdio.h>
+	},
+	"p7b.c": {
+		title: "p7b",
+		code: String.raw`#include<stdio.h>
 
 int main(int argc, char *argv[])
 {
@@ -478,10 +478,10 @@ int main(int argc, char *argv[])
 
 	return 0;
 }`,
-    },
-    "p9a.c": {
-        title: "p9a",
-        code: String.raw`#include<stdio.h>
+	},
+	"p9a.c": {
+		title: "p9a",
+		code: String.raw`#include<stdio.h>
 #include<unistd.h>
 #include<sys/stat.h>
 #include<fcntl.h>
@@ -504,10 +504,10 @@ int main()
 	printf("Changing permission of t1.txt to 0644\n");
 	 return 0;
 }`,
-    },
-    "p9b.c": {
-        title: "p9b",
-        code: String.raw`#include<stdio.h>
+	},
+	"p9b.c": {
+		title: "p9b",
+		code: String.raw`#include<stdio.h>
 #include<unistd.h>
 #include<fcntl.h>
 #include<sys/wait.h>
@@ -553,10 +553,10 @@ int main(int argc, char *argv[])
     close(fd);
     return 0;
 }`,
-    },
-    "p8a.c": {
-        title: "p8a",
-        code: String.raw`#include<stdio.h>
+	},
+	"p8a.c": {
+		title: "p8a",
+		code: String.raw`#include<stdio.h>
 #include<sys/stat.h>
 
 int main(int argc, char *argv[])
@@ -590,10 +590,10 @@ int main(int argc, char *argv[])
 
     return 0;
 }`,
-    },
-    "p8bchild.c": {
-        title: "p8bchild",
-        code: String.raw`#include<stdio.h>
+	},
+	"p8bchild.c": {
+		title: "p8bchild",
+		code: String.raw`#include<stdio.h>
 #include<unistd.h>
 
 int main(int argc, char *argv[])
@@ -611,10 +611,10 @@ int main(int argc, char *argv[])
 
 	return 0;
 }`,
-    },
-    "p8bparent.c": {
-        title: "p8bparent",
-        code: String.raw`#include<stdio.h>
+	},
+	"p8bparent.c": {
+		title: "p8bparent",
+		code: String.raw`#include<stdio.h>
 #include<unistd.h>
 #include<sys/wait.h>
 
@@ -643,5 +643,202 @@ int main()
 
     return 0;
 }`,
-    },
+	},
+	"p10a.c": {
+		title: "p10a",
+		code: String.raw`#include<stdio.h>
+#include<unistd.h>
+#include<sys/types.h>
+#include<fcntl.h>
+#include<stdlib.h>
+
+int main()
+{
+	pid_t pid;
+	pid = fork();
+
+	if(pid < 0)
+	{
+		printf("Fork failed");
+		exit(1);
+	}
+	if(pid > 0)
+	{
+		exit(0);
+	}
+
+	setsid();
+	printf("Daemon process started with pid : %d\n", getpid());
+
+	while(1)
+	{
+		sleep(5);
+	}
+	return 0;
+}`,
+	},
+	"p10b.c": {
+		title: "p10b",
+		code: String.raw`#include<stdio.h>
+#include<unistd.h>
+#include<fcntl.h>
+#include<stdlib.h>
+#include<sys/wait.h>
+
+
+int main()
+{
+	int pd1,pd2;
+
+	pd1 = fork();
+	if(pd1 == 0)
+	{
+		printf("First pid :%d\n",getpid());
+		sleep(1);
+		printf("First wait\n");
+		return 0;
+	}
+	else{
+		pd2 = fork();
+		if(pd2 == 0)
+		{
+			printf("Second pid :%d\n", getpid());
+			sleep(2);
+			printf("Second wait\n");
+			return 0;
+		}
+		else{
+			printf("first pid :%d\n", getpid());
+
+			wait(NULL);
+			waitpid(pd2, NULL, 0);
+		}
+	}
+	 return 0;
+}`,
+	},
+	"p11a.c": {
+		title: "p11a",
+		code: String.raw`#include<stdio.h>
+#include<fcntl.h>
+#include<unistd.h>
+int main(){
+	char file[20], ch;
+	int fd,size,i;
+	printf("Enter the filename:");
+	scanf("%s", file);
+	fd = open(file,O_RDONLY);
+
+	if(fd < 0){
+		printf("File not found");
+		return 0;
+	}
+	size = lseek(fd, 0, SEEK_END);
+	printf("Reverse Content:\n");
+	
+	for(int i=size-1; i>=0;i--){
+		lseek(fd, i, SEEK_SET);
+		read(fd, &ch, 1);
+		printf("%c", ch);
+	}
+	close(fd);
+}`,
+	},
+	"p11adup.c": {
+		title: "p11adup",
+		code: String.raw`#include<stdio.h>
+#include<unistd.h>
+#include<fcntl.h>
+
+int main()
+{
+	int fd1 , fd2;
+
+	fd1 = open("test.txt",O_CREAT | O_RDWR, 0644);
+
+	if(fd1 < 0)
+	{
+		printf("Error file opeining");
+		return 1;
+	}
+
+	fd2 = dup(fd1);
+	printf("%d %d\n",fd1,fd2);
+
+	return 0;
+}`,
+	},
+	"p11adup2.c": {
+		title: "p11adup2",
+		code: String.raw`#include<stdio.h>
+#include<unistd.h>
+#include<fcntl.h>
+
+int main()
+{
+	int fd1,fd2;
+
+	fd1 = open("test.txt",O_CREAT | O_WRONLY, 0644);
+
+	fd2 = dup2(fd1,0);
+	printf("%d %d\n",fd1,fd2);
+
+	write(fd1,"abcdef\n",7);
+	printf("abcdef\n");
+	 return 0;
+}`,
+	},
+	"p11bchild.c": {
+		title: "p11bchild",
+		code: String.raw`#include<stdio.h>
+#include<unistd.h>
+#include<stdlib.h>
+
+int main(int argc, char *argv[])
+{
+	int a,b,sum;
+
+	if(argc != 3)
+	{
+		printf("Usage %s num1 num2\n",argv[0]);
+		return 1;
+	}
+
+	a = atoi(argv[1]);
+	b = atoi(argv[2]);
+
+	sum  = a + b;
+	printf("Sum is :%d\n", sum);
+	return 0;
+}`,
+	},
+	"p11bparent.c": {
+		title: "p11bparent",
+		code: String.raw`#include<stdio.h>
+#include<unistd.h>
+#include<sys/wait.h>
+#include<fcntl.h>
+
+int main(int argc, char *argv[])
+{
+	int pid, status;
+
+	if(argc != 3)
+	{
+		printf("usage :%s num1 num2\n",argv[0]);
+		return 1;
+	}
+	pid = fork();
+	if(pid == 0)
+	{
+		execl("./child","child",argv[1],argv[2],NULL);
+		printf("Exel failed");
+	}
+	else{
+		wait(&status);
+		printf("Child exited with status: %d\n", status);
+	}
+	return 0;
+}`,
+	},
 };
