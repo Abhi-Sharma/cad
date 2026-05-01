@@ -4,8 +4,11 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Only intercept /*.c routes
-  if (!pathname.match(/^\/[^/]+\.c$/)) {
+  // Only intercept /pages and /*.c routes
+  const isCFile = pathname.match(/^\/[^/]+\.c$/);
+  const isPages = pathname === "/pages";
+
+  if (!isCFile && !isPages) {
     return NextResponse.next();
   }
 
@@ -22,6 +25,11 @@ export function middleware(request: NextRequest) {
     userAgent.startsWith("httpie");
 
   if (isCurlLike) {
+    if (pathname === "/pages") {
+      const url = request.nextUrl.clone();
+      url.pathname = "/api/programs";
+      return NextResponse.rewrite(url);
+    }
     const filename = pathname.slice(1); // strip leading /
     const url = request.nextUrl.clone();
     url.pathname = `/api/raw/${filename}`;
@@ -33,5 +41,5 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // Match any path ending in .c at the root level
-  matcher: ["/([^/]+)\\.c"],
+  matcher: ["/pages", "/([^/]+)\\.c"],
 };
