@@ -397,6 +397,251 @@ int main()
 	write(1,buf,strlen(buf));
 
 	close(fd);
+	}`,
+    },
+    "p7a.c": {
+        title: "p7a",
+        code: String.raw`#include<stdio.h>
+#include<setjmp.h>
+
+jmp_buf buf;
+int gv = 95;
+static int sv = 99;
+
+void f1()
+{
+	int av = 96;
+	register int rv = 97;
+	volatile int vv = 98;
+
+
+	printf("in f1()\n");
+	printf("gv=%d, av=%d, rv=%d, vv=%d, sv=%d\n", gv, av, rv, vv, sv);
+	if(setjmp(buf) == 0)
+	{
+		gv = 100;
+		av = 200;
+		rv = 300;
+		vv = 400;
+		sv = 500;
+		
+		longjmp(buf, 1);
+	}
+	else{
+		printf("After long jump\n");
+		printf("gv=%d, av=%d, rv=%d, vv=%d, sv=%d\n", gv, av, rv, vv, sv);
+	}
+}
+int main()
+{
+	f1();
+	return 0;
+}`,
+    },
+    "p7b.c": {
+        title: "p7b",
+        code: String.raw`#include<stdio.h>
+
+int main(int argc, char *argv[])
+{
+	FILE *fp1,*fp2;
+	char ch;
+
+	if(argc != 3)
+	{
+		printf("Usage %s source destination:",argv[0]);
+		return 1;
+	}
+
+	fp1 = fopen(argv[1],"r");
+
+	if(fp1 == NULL)
+	{
+		printf("Error opening source file:");
+		return 1;
+	}
+
+	fp2 = fopen(argv[2],"w");
+
+	if(fp2 == NULL)
+	{
+		printf("Error creating destination file");
+		return 1;
+	}
+
+	while((ch = fgetc(fp1))!=EOF)
+		fputc(ch,fp2);
+	printf("Copied successfully");
+
+	fclose(fp1);
+	fclose(fp2);
+
+	return 0;
+}`,
+    },
+    "p9a.c": {
+        title: "p9a",
+        code: String.raw`#include<stdio.h>
+#include<unistd.h>
+#include<sys/stat.h>
+#include<fcntl.h>
+
+int main()
+{
+	mode_t oldmask;
+
+	oldmask = umask(002);
+	printf("Oldmask:%03o, New mask : 022\n", oldmask);
+
+	int fd = creat("t1.txt", 0777);
+
+	if(fd < 0)
+	{
+		printf("Error creating file\n");
+	       	return 1;
+	}
+	chmod("t1.txt", 0644);
+	printf("Changing permission of t1.txt to 0644\n");
+	 return 0;
+}`,
+    },
+    "p9b.c": {
+        title: "p9b",
+        code: String.raw`#include<stdio.h>
+#include<unistd.h>
+#include<fcntl.h>
+#include<sys/wait.h>
+#include<sys/types.h>
+#include<sys/stat.h>
+
+int main(int argc, char *argv[])
+{
+	int fd;
+	char buf[21];
+	int n;
+
+	if(argc != 2)
+	{
+		printf("Usage: %s <filename>\n", argv[0]);
+		return 1;
+	}
+
+	fd = open(argv[1], O_RDONLY);
+	if(fd < 0)
+	{
+		printf("Error opening file");
+		return 1;
+	}
+
+	n = read(fd, buf, 20);
+	buf[n] = '\0';
+	printf("first 20: %s\n", buf);
+
+	lseek(fd, 10, SEEK_SET);
+	n = read(fd, buf, 20);
+	buf[n] = '\0';
+	printf("Next 20 from 10: %s\n", buf);
+	
+	lseek(fd, 10, SEEK_CUR);
+	n = read(fd, buf, 20);
+	buf[n] = '\0'; 
+	printf("next 20, from current: %s\n", buf);
+	
+	int size = lseek(fd, 0, SEEK_END);
+	printf("File size: %d\n", size);
+
+    close(fd);
+    return 0;
+}`,
+    },
+    "p8a.c": {
+        title: "p8a",
+        code: String.raw`#include<stdio.h>
+#include<sys/stat.h>
+
+int main(int argc, char *argv[])
+{
+    struct stat s;
+    int i;
+
+    if(argc < 2)
+    {
+        printf("Usage: %s file1 file2 ...\n", argv[0]);
+        return 1;
+    }
+
+    for(i = 1; i < argc; i++)
+    {
+        if(lstat(argv[i], &s) == -1)
+        {
+            printf("%s: Error\n", argv[i]);
+            continue;
+        }
+
+        if(S_ISREG(s.st_mode))
+            printf("%s: regular\n", argv[i]);
+        else if(S_ISDIR(s.st_mode))
+            printf("%s: directory\n", argv[i]);
+        else if(S_ISLNK(s.st_mode))
+            printf("%s: symbolic link\n", argv[i]);
+        else
+            printf("%s: other\n", argv[i]);
+    }
+
+    return 0;
+}`,
+    },
+    "p8bchild.c": {
+        title: "p8bchild",
+        code: String.raw`#include<stdio.h>
+#include<unistd.h>
+
+int main(int argc, char *argv[])
+{
+	if(argc < 2)
+	{
+		printf("Usage: %s <filename>\n", argv[0]);
+		return 1;
+	}
+
+	if(access(argv[1], F_OK) == 0)
+		printf("File '%s' exists and can be accessed.\n", argv[1]);
+	else
+		printf("File '%s' does not exist and cannot be accessed.\n", argv[1]);
+
+	return 0;
+}`,
+    },
+    "p8bparent.c": {
+        title: "p8bparent",
+        code: String.raw`#include<stdio.h>
+#include<unistd.h>
+#include<sys/wait.h>
+
+int main()
+{
+    int pid = fork();
+
+    if(pid == 0)
+    {
+        // Child
+        printf("Child process (PID: %d) executing...\n", getpid());
+
+        execl("./a.out", "a.out", "example.txt", NULL);
+
+        printf("Exec failed\n");
+    }
+    else
+    {
+        // Parent
+        printf("Parent process (PID: %d) executing...\n", getpid());
+
+        wait(NULL);
+
+        printf("Parent process: Child process (PID: %d) has exited.\n", pid);
+    }
+
+    return 0;
 }`,
     },
 };
