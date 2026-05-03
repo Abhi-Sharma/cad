@@ -399,6 +399,52 @@ int main()
 	close(fd);
 	}`,
 	},
+	"p6b.c": {
+		title: "p6b",
+		code: String.raw`#include<stdio.h>
+#include<fcntl.h>
+#include<unistd.h>
+
+int main() {
+	int fd,n;
+	char f1[100],buf[51];
+	struct flock f;
+	off_t s;
+	printf("Enter file name: ");
+	scanf("%s",f1);
+	fd=open(f1,O_RDWR);
+
+	s=lseek(fd,0,SEEK_END);
+
+	f.l_type=F_WRLCK;
+	f.l_whence=SEEK_SET;
+	f.l_start=s-100;
+	f.l_len=100;
+
+	fcntl(fd,F_GETLK,&f);
+	if(f.l_type!=F_UNLCK) {
+		printf("Locked by PID: %d\n",f.l_pid);
+		return 0;
+	}
+
+	f.l_type=F_WRLCK;
+	fcntl(fd,F_SETLK,&f);
+
+	printf("Region locked. Press Enter to continue...\n");
+	getchar();
+	getchar();
+
+	lseek(fd,s-50,SEEK_SET);
+	n=read(fd,buf,50);
+	buf[n]='\0';
+	printf("%s\n",buf);
+
+	f.l_type=F_UNLCK;
+	fcntl(fd,F_SETLK,&f);
+
+	printf("Region unlocked\n");
+}`,
+	},
 	"p7a.c": {
 		title: "p7a",
 		code: String.raw`#include<stdio.h>
@@ -862,36 +908,57 @@ int main()
 		title: "p12bechoall",
 		code: String.raw`#include<stdio.h>
 
-int main(int argc, char *argv[])
-{
-	int i;
+extern char **environ;
 
-	for(i = 0;i<argc;i++)
-	{
-		printf("argv[%d]:%s\n", i , argv[i]);
-	}
-	return 0;
+int main()
+{
+    int i = 0;
+
+    while(environ[i] != NULL)
+    {
+        printf("%s\n", environ[i]);
+        i++;
+    }
+
+    return 0;
 }`,
 	},
 	"p12bmain.c": {
 		title: "p12bmain",
 		code: String.raw`#include<stdio.h>
+#include<stdlib.h>
 #include<unistd.h>
+#include<sys/wait.h>
+
+extern char **environ;
 
 int main()
 {
-	int pid;
+    int pid = fork();
 
-	pid = fork();
-	if(pid  == 0)
-	{
-		execl("./echoall", "echoall", "myarg1","MYARG1",NULL);
-	}
-	else{
-		sleep(1);
-		 execl("./echoall","echoall","only 1 arg", NULL);
-	}
-	return 0;
+    if(pid == 0)
+    {
+        printf("Child process executing...\n");
+
+        char *env[] = {
+            "USER=ANMOL",
+            "PATH=/custom/bin",
+            "HOME=/home/custom",
+            NULL
+        };
+
+        execle("./echoall", "echoall", NULL, env);
+    }
+    else
+    {
+        printf("Parent process executing...\n");
+
+        wait(NULL);
+
+        execle("./echoall", "echoall", NULL, environ);
+    }
+
+    return 0;
 }`,
 	},
 };
