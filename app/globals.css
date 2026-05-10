@@ -1,4 +1,57 @@
-@import "tailwindcss";
+/* @import "tailwindcss"; */
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --primary: #0066ff;
+  --muted: #666666;
+  --border: #e5e5e5;
+  --card: #ffffff;
+  --card-foreground: #111111;
+  --accent: #f8f9fa;
+  --muted-foreground: #666666;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: ui-monospace, monospace;
+}
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.min-h-screen { min-height: 100vh; }
+.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+.text-center { text-align: center; }
+.max-w-3xl { max-width: 48rem; }
+.rounded-2xl { border-radius: 1rem; }
+.border { border: 1px solid var(--border); }
+.bg-card { background-color: var(--card); }
+.p-8 { padding: 2rem; }
+.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+.mb-6 { margin-bottom: 1.5rem; }
+.text-xl { font-size: 1.25rem; }
+.font-semibold { font-weight: 600; }
+.gap-4 { gap: 1rem; }
+.w-full { width: 100%; }
+.bg-primary { background-color: var(--primary); }
+.text-primary-foreground { color: #ffffff; }
+.rounded-xl { border-radius: 0.75rem; }
+.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.font-medium { font-weight: 500; }
+.mt-8 { margin-top: 2rem; }
+.text-xs { font-size: 0.75rem; }
+.text-muted-foreground { color: var(--muted-foreground); }
+.mt-2 { margin-top: 0.5rem; }
+.block { display: block; }
+.p-2 { padding: 0.5rem; }
+.bg-muted { background-color: #f3f4f6; }
+.font-mono { font-family: ui-monospace, monospace; }
 
 :root {
   --background: #ffffff;
@@ -11,17 +64,6 @@
   --copied-bg: #22c55e;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-code-bg: var(--code-bg);
-  --color-copied-bg: var(--copied-bg);
-  --font-mono: var(--font-geist-mono);
-}
 
 * {
   box-sizing: border-box;

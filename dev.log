@@ -1,0 +1,192 @@
+
+> web@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.20.53.80:3000
+✓ Ready in 668ms
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+
+○ Compiling /_not-found/page ...
+Error: Can't resolve 'tailwindcss' in '/home/abhi007/Music'
+    [2m[at finishWithoutResolve (/home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:909:18)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1001:14][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/home/abhi007/Music'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /home/abhi007/Music or above\n' +
+    '  resolve as module\n' +
+    "    /home/abhi007/Music/node_modules doesn't exist or is not a directory\n" +
+    "    /home/abhi007/node_modules doesn't exist or is not a directory\n" +
+    "    /home/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in '/home/abhi007/Music'
+    [2m[at finishWithoutResolve (/home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:909:18)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1001:14][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/home/abhi007/Music'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /home/abhi007/Music or above\n' +
+    '  resolve as module\n' +
+    "    /home/abhi007/Music/node_modules doesn't exist or is not a directory\n" +
+    "    /home/abhi007/node_modules doesn't exist or is not a directory\n" +
+    "    /home/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in '/home/abhi007/Music'
+    [2m[at finishWithoutResolve (/home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:909:18)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1001:14][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/home/abhi007/Music'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /home/abhi007/Music or above\n' +
+    '  resolve as module\n' +
+    "    /home/abhi007/Music/node_modules doesn't exist or is not a directory\n" +
+    "    /home/abhi007/node_modules doesn't exist or is not a directory\n" +
+    "    /home/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in '/home/abhi007/Music'
+    [2m[at finishWithoutResolve (/home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:909:18)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1001:14][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/home/abhi007/Music'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /home/abhi007/Music or above\n' +
+    '  resolve as module\n' +
+    "    /home/abhi007/Music/node_modules doesn't exist or is not a directory\n" +
+    "    /home/abhi007/node_modules doesn't exist or is not a directory\n" +
+    "    /home/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in '/home/abhi007/Music'
+    [2m[at finishWithoutResolve (/home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:909:18)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1001:14][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/home/abhi007/Music'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /home/abhi007/Music or above\n' +
+    '  resolve as module\n' +
+    "    /home/abhi007/Music/node_modules doesn't exist or is not a directory\n" +
+    "    /home/abhi007/node_modules doesn't exist or is not a directory\n" +
+    "    /home/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in '/home/abhi007/Music'
+    [2m[at finishWithoutResolve (/home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:909:18)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1001:14][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/home/abhi007/Music'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /home/abhi007/Music or above\n' +
+    '  resolve as module\n' +
+    "    /home/abhi007/Music/node_modules doesn't exist or is not a directory\n" +
+    "    /home/abhi007/node_modules doesn't exist or is not a directory\n" +
+    "    /home/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in '/home/abhi007/Music'
+    [2m[at finishWithoutResolve (/home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:909:18)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1001:14][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/home/abhi007/Music'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /home/abhi007/Music or above\n' +
+    '  resolve as module\n' +
+    "    /home/abhi007/Music/node_modules doesn't exist or is not a directory\n" +
+    "    /home/abhi007/node_modules doesn't exist or is not a directory\n" +
+    "    /home/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in '/home/abhi007/Music'
+    [2m[at finishWithoutResolve (/home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:909:18)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1001:14][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/home/abhi007/Music'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /home/abhi007/Music or above\n' +
+    '  resolve as module\n' +
+    "    /home/abhi007/Music/node_modules doesn't exist or is not a directory\n" +
+    "    /home/abhi007/node_modules doesn't exist or is not a directory\n" +
+    "    /home/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in '/home/abhi007/Music'
+    [2m[at finishWithoutResolve (/home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:909:18)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1001:14][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/abhi007/Music/civil/node_modules/enhanced-resolve/lib/Resolver.js:1080:5][0m
+    [2m[at eval (eval at create (/home/abhi007/Music/civil/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/home/abhi007/Music'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /home/abhi007/Music or above\n' +
+    '  resolve as module\n' +
+    "    /home/abhi007/Music/node_modules doesn't exist or is not a directory\n" +
+    "    /home/abhi007/node_modules doesn't exist or is not a directory\n" +
+    "    /home/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+[?25h
